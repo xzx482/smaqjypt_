@@ -1754,12 +1754,19 @@ def 获取文件(路径,类型=None):
 
 '''
 	try:
-		数据=访问("https://raw.githubusercontent.com/xzx482/smaqjypt_/main/"+路径)[6]
+		#数据=访问("https://raw.githubusercontent.com/xzx482/smaqjypt_/main/"+路径)[6]
+		uo=request.urlopen("https://raw.githubusercontent.com/xzx482/smaqjypt_/main/"+路径)
+		if(uo.getcode()>=300):
+			raise
 	except:
 		try:
-			数据=访问("http://xgithub.dynv6.net/"+路径)[6]
+			#数据=访问("http://xgithub.dynv6.net/"+路径)[6]
+			uo=request.urlopen("http://xgithub.dynv6.net/"+路径)
+			if(uo.getcode()>=300):
+				raise
 		except:
 			return None
+	数据=解码(uo.read())
 	if(类型=="json"):
 		try:
 			return json.loads(数据)
@@ -1805,7 +1812,7 @@ if __name__ == '__main__':
 		if(版本更新_获取):
 			#if 1:
 			try:
-				版本更新_内容=json.loads(版本更新_获取.read().decode('utf-8'))
+				版本更新_内容=json.loads(解码(版本更新_获取.read()))
 				if(版本更新_内容["版本"]>__版本__):
 					print('有更新')
 					try:print(版本更新_内容['更新内容'],end='')
