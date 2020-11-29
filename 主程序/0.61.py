@@ -1814,7 +1814,8 @@ if __name__ == '__main__':
 						if 1:
 						#try:
 							print('下载...')
-							for i in 版本更新_内容['url'][文件类型]:
+							#for i in 版本更新_内容['url'][文件类型]:
+							for i in 版本更新_内容['url'][0]:
 								try:
 									新文件_响应=request.urlopen(i)
 									新文件=新文件_响应.read()
