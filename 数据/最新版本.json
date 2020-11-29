@@ -1,14 +1,11 @@
 {
-  "版本":0.6,
+  "版本":0.61,
   "更新内容":"hello, world",
   "url":[
     [
-      "https://raw.githubusercontent.com/xzx482/smaqjypt_/main/%E4%B8%BB%E7%A8%8B%E5%BA%8F/0.6.py",
-      "https://xzx482.github.io/smaqjypt_/%E4%B8%BB%E7%A8%8B%E5%BA%8F/0.6.py"
-    ],
-    [
-      "https://raw.githubusercontent.com/xzx482/smaqjypt_/main/%E4%B8%BB%E7%A8%8B%E5%BA%8F/0.6.exe",
-      "https://xzx482.github.io/smaqjypt_/%E4%B8%BB%E7%A8%8B%E5%BA%8F/0.6.exe"
+      "https://raw.githubusercontent.com/xzx482/smaqjypt_/main/%E4%B8%BB%E7%A8%8B%E5%BA%8F/0.61.py",
+      "https://xzx482.github.io/smaqjypt_/%E4%B8%BB%E7%A8%8B%E5%BA%8F/0.61.py",
+      "http://xgithub.dynv6.net/%E4%B8%BB%E7%A8%8B%E5%BA%8F/0.61.py"
     ]
   ]
 }
