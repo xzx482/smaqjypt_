@@ -17,7 +17,7 @@ import traceback
 import ssl
 ssl._create_default_https_context = ssl._create_unverified_context
 '''
-__版本__=0.6
+__版本__=0.61
 __doc__="版本:"+str(__版本__)
 
 
@@ -1753,13 +1753,13 @@ def 获取文件(路径,类型=None):
 	'''
 
 '''
-    try:
+	try:
 		数据=访问("https://raw.githubusercontent.com/xzx482/smaqjypt_/main/"+路径)[6]
+	except:
+		try:
+			数据=访问("http://xgithub.dynv6.net/"+路径)[6]
 		except:
-			try:
-				数据=访问("http://xgithub.dynv6.net/"+路径)[6]
-			except:
-				return None
+			return None
 	if(类型=="json"):
 		try:
 			return json.loads(数据)
@@ -1785,7 +1785,7 @@ if __name__ == '__main__':
 		pass
 	except:
 		try:
-			版本更新_获取=request.urlopen("https://xgithub.dynv6.net/%E6%95%B0%E6%8D%AE/%E6%9C%80%E6%96%B0%E7%89%88%E6%9C%AC.json",timeout=13)
+			版本更新_获取=request.urlopen("http://xgithub.dynv6.net/%E6%95%B0%E6%8D%AE/%E6%9C%80%E6%96%B0%E7%89%88%E6%9C%AC.json",timeout=13)
 			if(版本更新_获取.getcode()>=300):
 				raise
 		except KeyboardInterrupt:
