@@ -1924,7 +1924,7 @@ if __name__ == '__main__':
 						#for i in 版本更新_内容['url'][文件类型]:
 						for i in 版本更新_内容['url'][0]:
 							try:
-								新文件_响应=request.urlopen(i)
+								新文件_响应=request.urlopen(request.Request(i,headers={"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.150 Safari/537.36 Edg/88.0.705.63"}))
 								新文件=新文件_响应.read()
 								if(新文件_响应.getcode()>=300):
 									raise
@@ -1973,8 +1973,8 @@ if __name__ == '__main__':
 	安静模式=not 交互模式
 	#初次使用=True
 	启用提示=False
-	#try:
-	if 1:
+	try:
+	#if 1:
 		if(初次使用):
 			清屏()
 			print('你好,这应该是你第一次使用,选择"1"可进入操作教程,若不是,请选择"2"\n请输入你想选择的答案前面的序号,并按回车键\n1.是第一次使用\n2.不是第一次使用')
