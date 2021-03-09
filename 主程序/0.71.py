@@ -18,7 +18,7 @@ import random
 import ssl
 ssl._create_default_https_context = ssl._create_unverified_context
 '''
-__版本__=0.7
+__版本__=0.71
 __doc__="版本:"+str(__版本__)
 
 
